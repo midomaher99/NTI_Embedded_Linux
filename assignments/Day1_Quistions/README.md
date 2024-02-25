@@ -7,13 +7,12 @@
 man finds and displays the manual pages of a given command, function or utility if exist.
 
 ## Q3: what is the difference between rm and rmdir?
-* rm is used for removing files or directories.
-* rm is only used for removing empty directories.
+* 'rm' is used for removing files or directories.
+* 'rmdir' is only used for removing empty directories.
 
 ## Q4: creat the following hierarchy under home directory
 ![alt text](../../.images/day1_hierarchy.png)
-'''
-mkdir ~/dir1
+'''mkdir ~/dir1
 mkdir ~/dir1/dir11
 touch ~/dir1/dir11/file1
 mkdir ~/dir1/dir12
