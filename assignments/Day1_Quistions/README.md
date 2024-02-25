@@ -3,10 +3,10 @@
 * Debian
 * Redhat
 
-## Q2: What is man command used for?
-man finds and displays the manual pages of a given command, function or utility if exist.
+## Q2: What is `man` command used for?
+`man` finds and displays the manual pages of a given command, function or utility if exist.
 
-## Q3: what is the difference between rm and rmdir?
+## Q3: what is the difference between `rm` and `rmdir`?
 * `rm` is used for removing files or directories.
 * `rmdir` is only used for removing empty directories.
 
