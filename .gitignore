@@ -3,5 +3,5 @@
 *.elf
 *.out
 *.swp
-./class_work/*
+class_work/
 
