@@ -3,3 +3,5 @@
 *.elf
 *.out
 *.swp
+/home/maher/NTI_Embedded_Linux/class_work/*
+
