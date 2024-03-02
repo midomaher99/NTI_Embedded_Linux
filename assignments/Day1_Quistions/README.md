@@ -49,5 +49,12 @@ Nothing happend as OldFiles is not a directory.
 ## Q9: What command `type` are used for?
 `type` command is used to know if a certain command is a built-in command or external command and the path of its binary if it is an external command.
 
+## Q10: Show 2 types of command file in /usr/bin that start with letter c
+* cd
+* cat
+
+## Q11: Using man command find the command to read file. (Note: man take option)
+Using `man -k` we can search for any pattern in the man pages.
+
 ## Q12: What is the usage of `apropos` command?
 `aprops` is a command used for searching the manual page names and descriptions.
