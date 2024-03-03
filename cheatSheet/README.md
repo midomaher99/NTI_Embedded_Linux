@@ -6,6 +6,7 @@
 * `/etc/bashrc` defaults for all users when starting a **subshell**
 * `~/.profile` Specific setting for one user applied when starting a **login shell**.
 * `~/.bashrc` Specific setting for one user applied when starting a **subshell**.
+* `/etc/sudoers` 
 
 ## Important variables
 * `$SHELL` the user default shell.
@@ -38,3 +39,42 @@
 * `which` show which exact command will be executed by shell.
 * `alias` creating alias for commands.
 * `unalias` removing aliases of a command.
+* `set` Change the value of shell attributes and positional parameters, or display the names and values of shell variables.
+* `export var=value` to make global variables can be inherited by child processes.
+* `tee` read from standard input and write to standard output and files.
+* `whereis` locate the binary, source, and manual page files for a command.
+* `whereis -b` locate only the binary a command.
+* `locate` to locate a file in the whole file system.
+* `find path-to-search –name search-word` To search for files in a directory hierarchy.
+* `grep` to search inside files
+    * `grep pattern file`
+    * `grep -v` to print all lines without the matched pattern
+    * `grep -r pattern` to search recursivly in all files in current directory
+    * `grep -r pattern [dir path]` to search recursivly in all files in a specified dir
+* `cut -d(delimiter) -f(column num) filename` print only specified column from a delimited file
+* `wc` print the number oflines, words, and characters in a file. 
+* `ln` creat hard link
+* `ln -s` creat symbolic link
+* `whoami` print the current user.
+* `hostname` print the host name.
+* `date` print date and time.
+* `uptime` print how long the system has been running.
+* `uname -a` print all system information. 
+* `free` print the used and free mwmory
+* `df` report file system space usage.
+* `du` report the file estimated soace usage
+* `dmesg` print or control the kernel ring buffer (print kernel log)
+* `lsusb` List USB devices
+* `lspci` List all PCI devices
+* `lscpu` Display information about the CPU architecture
+* `lsmod` List loaded modules
+* `tar -cf` archiving
+* `tar -xf` extracting
+    add before `f`
+    * `-J` for compress or decompress by xz algorithm
+    * `-j` for compress or decompress by bzipz algorithm
+    * `-z` for compress or decompress by gzip algorithm
+    * `xz` `unxz` `bzip2` `bunbzip2` `gzip` `gzip -d` compressing and decompressing
+* `su` temporary switch to another user without changing full
+environment.
+* `su -` switch to full user environment as log-out then login to another user
