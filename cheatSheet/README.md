@@ -6,7 +6,11 @@
 * `/etc/bashrc` defaults for all users when starting a **subshell**
 * `~/.profile` Specific setting for one user applied when starting a **login shell**.
 * `~/.bashrc` Specific setting for one user applied when starting a **subshell**.
-* `/etc/sudoers` 
+* `/etc/sudoers`
+* `/etc/paswwd` username:paswwd status:UID:GID:comments:home dir:login shell
+* `/etc/shadow` 
+* `/etc/group` GroupName:EncryptedGroupPassword: GroupID:GroupMember
+* `/etc/gshadow` GroupName:Password:GroupAdmin
 
 ## Important variables
 * `$SHELL` the user default shell.
@@ -45,10 +49,12 @@
 * `whereis` locate the binary, source, and manual page files for a command.
 * `whereis -b` locate only the binary a command.
 * `locate` to locate a file in the whole file system.
+    * `-b` to locate a file with only the exact name 
 * `find path-to-search –name search-word` To search for files in a directory hierarchy.
 * `grep` to search inside files
     * `grep pattern file`
     * `grep -v` to print all lines without the matched pattern
+    * `grep -w` to search for a specific word
     * `grep -r pattern` to search recursivly in all files in current directory
     * `grep -r pattern [dir path]` to search recursivly in all files in a specified dir
 * `cut -d(delimiter) -f(column num) filename` print only specified column from a delimited file
@@ -78,3 +84,29 @@
 * `su` temporary switch to another user without changing full
 environment.
 * `su -` switch to full user environment as log-out then login to another user
+* `adduser` `addgroup` friendlier fron end tho the low level tools `useradd` `groupadd` as they configure the environment for the new user
+* `usermod` modify a user account 
+    * `-aG` to append new primary groups
+    * `-g` to change the initial group
+    * `-L` to lock user password
+    * `-U` to unlock user password
+    * `-l` to change the login name
+* `userdel` delete a user 
+    `-r` It will remove user’s home directory and the user’s mail spool. Files located in other file systems will have to be searched for and deleted
+* `gtoupmod`
+    * `-n` change the groupname
+    * `-g` change the group id
+* `groupmems` to see the group members
+* `groupdel` to delete a group
+* `chage` to set up password aging
+    * `-m`
+    * `-M`
+    * `-E`
+    * `-I`
+    * `-W
+* `passwd` change user passwords and can change aging and lock/unlock user.
+* `compgen -c` print all commands can br ran by the shell
+
+
+ -------------------------DAY 5 process management remained----------------
+ 
