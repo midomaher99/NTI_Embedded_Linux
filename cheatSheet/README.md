@@ -110,3 +110,7 @@ environment.
 
  -------------------------DAY 5 process management remained----------------
  
+
+* `chown user:group file` change the ownerdhip of a file or directory
+    * `-r` for recursively chang the owner.
+* `chmod` change the permissions
