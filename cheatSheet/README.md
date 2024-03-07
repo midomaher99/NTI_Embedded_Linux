@@ -68,7 +68,7 @@
 * `uname -a` print all system information. 
 * `free` print the used and free mwmory
 * `df` report file system space usage.
-* `du` report the file estimated soace usage
+* `du` report the file estimated space usage
 * `dmesg` print or control the kernel ring buffer (print kernel log)
 * `lsusb` List USB devices
 * `lspci` List all PCI devices
@@ -114,3 +114,4 @@ environment.
 * `chown user:group file` change the ownerdhip of a file or directory
     * `-r` for recursively chang the owner.
 * `chmod` change the permissions
+* `awk -v FS=delimiter '{print NF}'` prints the number of fields of an input record.
