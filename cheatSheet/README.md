@@ -11,6 +11,7 @@
 * `/etc/shadow` 
 * `/etc/group` GroupName:EncryptedGroupPassword: GroupID:GroupMember
 * `/etc/gshadow` GroupName:Password:GroupAdmin
+* `/etc/ld.so.cashe` contain all configured dynamic libs
 
 ## Important variables
 * `$SHELL` the user default shell.
@@ -115,3 +116,5 @@ environment.
     * `-r` for recursively chang the owner.
 * `chmod` change the permissions
 * `awk -v FS=delimiter '{print NF}'` prints the number of fields of an input record.
+* `ldconfig` update the cash file of the configured dynamic libs
+    * `-p` to print all configured libs
