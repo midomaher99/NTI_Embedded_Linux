@@ -1,7 +1,7 @@
 ## Section1
 The script created two variables `HELLO` which is environmen variable and `LOCAL` which is local variable and we will discuss the visibility of each one in both termenals. the terminal which the script ran at it will be called **OLDTERMINAL** and the terminal which is opend from the script will be called **NEWTERMINAL**.
 
-`HELLO`: is only visible in the **NEWTERMINAL** only as the environment variable `HELLO` was appended to .bashrc before **NEWTERMINAL** execution
+`HELLO`: is only visible in the **NEWTERMINAL** only as the environment variable `HELLO` was appended to .bashrc before **NEWTERMINAL** execution. But if we execute the `.bashrc` script the variable will be visible to both terminals.
 
 `LOCAL`: is not visibl in **both** terminals as it was local variable for the proccess of the running script not for any terminal of them.
 
@@ -34,4 +34,5 @@ The script created two variables `HELLO` which is environmen variable and `LOCAL
 ### Q8: Create a hard link of /etc/passwd in /boot. Could you? Why?
 can't creat this hard link as hard link can't be created outside the same file system.
 
-### Q9:
+### Q9: echo \ it will jump to the next line, and will print > Notice the prompt ”>” what is that? and how can you change it from “>” to “:”.
+it prints > as it expectes more inputs from the next line and it can be changed to : by changing the `PS2` environment variablr to : by using `export PS2=:` in `~/.bashrc` or `~/.profile` files.
