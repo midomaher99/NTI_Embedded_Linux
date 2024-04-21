@@ -3,6 +3,10 @@
 *.elf
 *.out
 *.swp
+*.ko
+*.mod.*
+*.order
+*.symvers
 class_work/
 home_work/
 .vscode/
