@@ -1,0 +1,1 @@
+cmd_/home/maher/NTI_Embedded_Linux/device_drivers/1.hello_world_module/modules.order := {   echo /home/maher/NTI_Embedded_Linux/device_drivers/1.hello_world_module/hello_world.ko; :; } | awk '!x[$$0]++' - > /home/maher/NTI_Embedded_Linux/device_drivers/1.hello_world_module/modules.order
