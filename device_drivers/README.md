@@ -16,7 +16,7 @@ The kernel headers will be found under `/usr/src/linux-headers-5.15.0-105-generi
 #### Setting up vs code environment
 To use the vs code features as auto complete we need to add the path to the kernel headers to its include path in `.vscode/c_cpp_properties.json` under your working space by appending `/usr/src/linux-headers-5.15.0-105-generic/include` to `includePath` variable using `,` separator.
 ### Creating module source code
-I will create a new directory under my work space for this module `mkdir hello_world_module` then create a C source file for the module source code [hello_world.c](./hello_world_module/hello_world.c).
+I will create a new directory under my work space for this module `mkdir hello_world_module` then create a C source file for the module source code [hello_world.c](./1.hello_world_module/hello_world.c).
 ```
 #include <linux/module.h>
 #include <linux/init.h>
@@ -47,7 +47,7 @@ In our module we can't use the C libs or its headers as it will run in the kerne
 * `__init` is a key word that tells to linker to put this function into `.init` section which will be removed from memory after finishing the execution of this function.
 * `__exit` is a key word that tells to linker to put this function into `.exit` section which will be not loaded into the memory if the module is a static module as it will be a part of the kernel which will not ever exit.
 ### Building the module
-To build the module we need to invoke a Makefile implemented under `/lib/modules/x.xx.x-xxx-generic/build` so we will create our make file which will invoke it [Makefile](./hello_world_module/Makefile)
+To build the module we need to invoke a Makefile implemented under `/lib/modules/x.xx.x-xxx-generic/build` so we will create our make file which will invoke it [Makefile](./1.hello_world_module/Makefile)
 ```
 obj-m = hello_world.o
 BDIR=/lib/modules/$(shell uname -r)/build
