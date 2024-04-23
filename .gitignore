@@ -4,7 +4,7 @@
 *.out*
 *.swp*
 *.ko*
-*.mod.*
+*.mod*
 *.order*
 *.symvers*
 class_work/
