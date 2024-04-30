@@ -28,12 +28,12 @@ ssize_t	mod_read(struct file * my_file, char __user * user_buff, size_t read_siz
         bytes_read =(buff_size - *poffset);
 
     //performing read to the shared buffer between user and kernel
-    if(copy_to_user(user_buff,buff,bytes_read)) //copy_to_user returns 0 on success
+    if(copy_to_user(user_buff,(buff + *poffset),bytes_read)) //copy_to_user returns 0 on success
         return -EFAULT;
     
     //updating offset
     *poffset += bytes_read;
-
+    
     //return number of read bytes on success
     return bytes_read;
 
@@ -43,14 +43,14 @@ ssize_t	mod_write(struct file * my_file, const char __user * user_buff, size_t w
 {
     ssize_t bytes_write=0;
     printk("%s is called \n", __FUNCTION__);    //for debugging and tracing
-
+ 
     //calc number of bytes to write
     if (write_size < (buff_size - *poffset))
         bytes_write = write_size;
     else
         bytes_write =  (buff_size - *poffset);
     //performing write to the kernel buffer
-    if(copy_from_user(buff,user_buff,bytes_write))
+    if(copy_from_user((buff + *poffset),user_buff,bytes_write))
         return -EFAULT;
     
     //updating offset
