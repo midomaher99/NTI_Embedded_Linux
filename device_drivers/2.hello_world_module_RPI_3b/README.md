@@ -12,7 +12,7 @@ There is an example for linux module we will find in `<PATH_TO_POKY>/poky/meta-s
 * `mkdir recipes-hello_module`
 * `cp -r <PATH_TO_POKY>/poky/meta-skeleton/recipes-kernel/hello-mod/ recipes-hello_module/`
 * `rm hello-mod/files/hello.c` Removing the example source code to add our source code.
-* `cp <our src file> .` for this example the src file is imlemented in the last section 1.hello_world_module.
+* `cp <our src file> .` for this example the src file is imlemented in [1.hello_world_module](../1.hello_world_module/)
 * edite the Makefile variable with the name of our src file name `obj-m = hello_world.o`.
 * edite the `hello-mod_0.1.bb` vriable `SRC_URI` and chane the src file name with our src file name `hello_world.c`
 ### 3. Adding the meta-layer into our build environment 
