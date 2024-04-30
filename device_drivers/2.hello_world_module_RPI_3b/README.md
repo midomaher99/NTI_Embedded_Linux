@@ -5,7 +5,7 @@ Here we will discuss how to build and deploy kernel modules into another target 
 ## Making a layer and a recipe
 ### 1. Creating a meta-layer 
 * `bitbake-layers create-layer meta-hello-module`
-* `rm -r  <PATH_TO_LAYER>/README <PATH_TO_LAYER>/recipes-example
+* `rm -r  <PATH_TO_LAYER>/README <PATH_TO_LAYER>/recipes-example`
 ### 2. Creating a recipe
 There is an example for linux module we will find in `<PATH_TO_POKY>/poky/meta-skeleton/recipes-kernel/hello-mod`, we will copy it into our layer as a skelton for any kernel module we will imlement.
 * `cd meta-hello-module`
